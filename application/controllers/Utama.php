@@ -17,9 +17,10 @@ class Utama extends CI_Controller
             'data' => $this->M_pengaturan->GetAll()->result_array(),
             'brosur' => $this->M_brosur->GetAll()->result_array(),
             'footer' => $this->M_pengaturan->GetAll()->result_array(),
+            'header' => $this->M_pengaturan->GetAll()->result_array(),
             'judul' => 'Data Pengaturan',
         );
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/index', $data);
         $this->load->view('frontend/footer', $data);
     }
@@ -32,7 +33,7 @@ class Utama extends CI_Controller
             'judul' => 'Halaman Tentang Kami',
         );
         $data['footer'] = $this->M_pengaturan->GetAll()->result_array();
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/tentangkami', $data);
         $this->load->view('frontend/footer', $data);
     }
@@ -47,7 +48,7 @@ class Utama extends CI_Controller
         if ($this->input->post('keyword')) {
             $data['data'] = $this->M_blog->cariDataBlog();
         }
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/blog/index', $data);
         $this->load->view('frontend/footer', $data);
     }
@@ -60,7 +61,7 @@ class Utama extends CI_Controller
             'footer' => $this->M_pengaturan->GetAll()->result_array(),
             'judul' => 'Detail Post'
         );
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/blog/detail', $data);
         $this->load->view('frontend/footer', $data);
     }
@@ -72,7 +73,7 @@ class Utama extends CI_Controller
             'footer' => $this->M_pengaturan->GetAll()->result_array(),
             'judul' => 'Data Gallery',
         ); //u can use library array
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/galeri/index', $data);
         $this->load->view('frontend/footer', $data);
     }
@@ -83,7 +84,7 @@ class Utama extends CI_Controller
             'footer' => $this->M_pengaturan->GetAll()->result_array(),
             'judul' => 'Kesulitan Mendaftar',
         ); //u can use library array
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/blank', $data);
         $this->load->view('frontend/footer', $data);
     }
@@ -94,17 +95,17 @@ class Utama extends CI_Controller
             'footer' => $this->M_pengaturan->GetAll()->result_array(),
             'judul' => 'Tata Cara Mendaftar',
         ); //u can use library array
-        $this->load->view('frontend/header');
+        $this->load->view('frontend/header', $data);
         $this->load->view('frontend/tatacara_daftar', $data);
         $this->load->view('frontend/footer', $data);
     }
 
-    public function brosur()
-    {
-        $data = array(
-            'brosur' => $this->M_brosur->GetAll()->result_array(),
-            'judul' => 'Data Pengaturan',
-        );
-        $this->load->view('frontend/brosur.php', $data);
-    }
+    // public function brosur()
+    // {
+    //     $data = array(
+    //         'brosur' => $this->M_brosur->GetAll()->result_array(),
+    //         'judul' => 'Data Pengaturan',
+    //     );
+    //     $this->load->view('frontend/brosur.php', $data);
+    // }
 }

@@ -31,11 +31,11 @@ class Anak extends CI_Controller
     $data = array(
       'judul' => 'Tambah Data',
       'user' => $this->M_anak->GetAll(),
-      'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
-      'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
-      'akta' => $this->M_akta->GetAll(),
-      'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
-      'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
+      // 'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
+      // 'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
+      // 'akta' => $this->M_akta->GetAll(),
+      // 'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
+      // 'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
     );
     $this->template->load($this->foldertemplate . 'template', $this->folder . 'tambah', $data);
   }
@@ -92,11 +92,11 @@ class Anak extends CI_Controller
       'detail' => $this->M_anak->GetById_detail_anak($id),
       'judul' => 'Edit Data',
       'user' => $this->M_user->GetAll(),
-      'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
-      'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
-      'akta' => $this->M_akta->GetAll(),
-      'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
-      'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
+      // 'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
+      // 'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
+      // 'akta' => $this->M_akta->GetAll(),
+      // 'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
+      // 'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
     );
     $this->template->load($this->foldertemplate . 'template', $this->folder . 'edit', $data);
   }
@@ -109,11 +109,11 @@ class Anak extends CI_Controller
       'detail' => $this->M_anak->GetById_detail_anak($id),
       'judul' => 'Detail Data',
       'user' => $this->M_user->GetAll(),
-      'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
-      'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
-      'akta' => $this->M_akta->GetAll(),
-      'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
-      'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
+      // 'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
+      // 'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
+      // 'akta' => $this->M_akta->GetAll(),
+      // 'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
+      // 'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
     );
     $this->template->load($this->foldertemplate . 'template', $this->folder . 'detail', $data);
   }
@@ -196,11 +196,11 @@ class Anak extends CI_Controller
       'detail' => $this->M_anak->GetById_detail_anak($id),
       'judul' => 'Detail Data',
       'user' => $this->M_user->GetAll(),
-      'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
-      'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
-      'akta' => $this->M_akta->GetAll(),
-      'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
-      'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
+      // 'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
+      // 'keadaan_saat_ini' => $this->M_keadaan_saat_ini->GetAll(),
+      // 'akta' => $this->M_akta->GetAll(),
+      // 'alasan_masuk_panti' => $this->M_alasan_masuk_panti->GetAll(),
+      // 'jenis_bantuan' => $this->M_jenis_bantuan->GetAll()
     );
 
     $this->load->view($this->folder . 'lap_detail_anak_pdf', $data);

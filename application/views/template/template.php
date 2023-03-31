@@ -10,12 +10,12 @@
   <meta name="author" content="HNF">
   <meta name="description" content="E-PONPES">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manajemen <?= $this->fungsi->user_login()->nama ?> E-ponpes</title>
+  <title>Manajemen <?= $this->fungsi->user_login()->nama ?> SDN MEJASEM BARAT 01</title>
 
-  <link rel="apple-touch-icon" href="apple-icon.png">
+  <link rel="apple-touch-icon" href="">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="<?= base_url() ?>assets/frontend/img/logo_ponpes.jpg" />
+  <link rel="icon" type="image/png" href="<?= base_url() ?>assets/images/sdn.jfif">
   <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/themify-icons/css/themify-icons.css">
@@ -60,7 +60,7 @@
         <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand p-2" href="<?= site_url('Dashboard') ?>"><img class="rounded" src="<?= base_url() ?>assets/frontend/img/logo_ponpes.jpg" alt="" style="width: 70px;"> &nbsp; E-PONPES</a>
+        <a class="navbar-brand p-2" href="<?= site_url('Dashboard') ?>"><img class="rounded" src="<?= base_url() ?>assets/images/emm.png" alt="" style="width: 70px;"> &nbsp; E-SEKOLAH</a>
       </div>
 
       <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -74,7 +74,7 @@
           <?php if ($this->fungsi->user_login()->role == 0) { ?>
 
             <!-- Bagian Dropdown Manajemen Data -->
-            <li class="menu-item-has-children dropdown">
+            <!--<li class="menu-item-has-children dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i> Manajemen Data</a>
               <ul class="sub-menu children dropdown-menu">
                 <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('akta') ?>">Akta</a></li>
@@ -83,7 +83,7 @@
                 <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('jenis_bantuan') ?>">Jenis Bantuan</a></li>
                 <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('keadaan_saat_ini') ?>">Keadaan Saat Ini</a></li>
               </ul>
-            </li>
+            </li>-->
 
             <!-- Manajemen Pengguna, Pengurus, dan Santri -->
             <li>
@@ -93,9 +93,9 @@
               <a href="<?= base_url('pengurus') ?>"> <i class="menu-icon fa fa-group"></i>Manajamen Pengurus</a>
             </li>
 
-            <li>
+            <!--<li>
               <a href="<?= base_url('assatidz') ?>"> <i class="menu-icon fa fa-group"></i>Manajamen Assatidz</a>
-            </li>
+            </li>-->
 
             <!-- Bagian Dropdown Manajemen Data -->
             <!-- <li class="menu-item-has-children dropdown">
@@ -116,7 +116,7 @@
           <!-- Role Pengurus -->
           <?php if ($this->fungsi->user_login()->role != 2) { ?>
             <li>
-              <a href="<?= base_url('anak') ?>"> <i class="menu-icon fa fa-female"></i>Manajamen Santri</a>
+              <a href="<?= base_url('anak') ?>"> <i class="menu-icon fa fa-female"></i>Manajamen Siswa</a>
             </li>
           <?php } ?>
           <!-- Akhir Role -->
